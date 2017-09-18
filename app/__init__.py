@@ -3,28 +3,26 @@ from flask import Flask, render_template, request, redirect, flash, url_for, ses
 app = Flask(__name__)
 app.secret_key = 'supposed to be a secret'
 
+
 @app.route('/about/')
 def about():
+    title = "About Us"
+    content = "Team work mattters."
+    return render_template('wrapper.html', title = title, content = content)
 
-    return render_template('about-contact.html')
 
 @app.route('/contact/')
 def contact():
-
-    return "Contact us"
-
+    title = "Contact Us"
+    content = "Feel free to drop by and say hi."
+    return render_template('wrapper.html', title = title, content = content)
 
 
 @app.route('/')
 def home_page():
-	"""
-	Displaying homepage
-	"""
 
-	title = "YDL | YouTube Downloader"
-
-
-	return render_template('index.html', title = title)
+    content = "Team work matters."
+    return render_template('home.html', content = content)
 
 
 @app.errorhandler(404)
@@ -32,21 +30,17 @@ def page_not_found(error):
     """
 	for anyone trying different links or searching for images within the server
     """
-    return render_template('error_template.html' , title = "404 bud",
-    												message = "Time to make the chimi-fuckin'-changas. ",
-    												subline = "404, not there",
-    												image_location = url_for('static', filename = 'images/deadpool-funny.jpg') ), 404
+    title = "404 bud."
+    content = "what you are searching for isn't available."
+    return render_template('wrapper.html', title = title, content = content), 404
 
 
 @app.errorhandler(400)
 def bad_request(error):
-	"""
-	For handling situations where the server doesn't know what to do with the browser's request
-	"""
-	return render_template('error_template.html' , title = "Aaaah ...",
-													message = "나는 이해하지 못한다.",
-    												subline = "Yeah, the server couldn't understand what you asked for, Sorry",
-    												image_location = url_for('static', filename = 'images/simpson-gangam.jpg')), 400
+
+    title = "Aaaah ..."
+    content = "Bad request, the server failed to help you."
+    return render_template('wrapper.html' , title = title, content = content), 400
 
 
 if __name__ == '__main__':
