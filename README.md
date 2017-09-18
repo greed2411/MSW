@@ -11,4 +11,6 @@ Yet to do :
 
 ### Backend
 
- - [ ] Flask app and jinja templating for 'About Us'
+ - [x] Flask app
+ - [x] jinja templating for 'About Us'
+ - [ ] error handling
