@@ -1,0 +1,116 @@
+{% extends "wrapper.html" %} {% block content %}
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">{{ content }}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="{{ url_for('static', filename = 'images/background3.jpg') }}" alt="Unsplashed background img 3"></div>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Shreyas Sharma</span>
+                        <p class="center">Mechatronics Head</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "shreyas") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Axel</span>
+                        <p class="center">Biotech Head</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "axel") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Joshua</span>
+                        <p class="center">Electronics Head</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "joshua") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Shaishav</span>
+                        <p class="center">Dunno</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "shaishav") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Aakriti</span>
+                        <p class="center">Dunno</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "aakriti") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card z-depth-0">
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="{{ url_for('static', filename = 'images/propic.jpg') }}">
+
+                        </div><br>
+                        <span class="card-title center">Jaivarsan</span>
+                        <p class="center">Machine Learning Tech Lead</p>
+                    </div>
+                    <div class="card-action center">
+                        <a href="{{ url_for('profile', name = "jaivarsan") }}">MORE</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
