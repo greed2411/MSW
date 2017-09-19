@@ -7,6 +7,7 @@
   <title>Motus Simulation | Creation Labs</title>
 
   <!-- CSS  -->
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
 
 </head>
 
@@ -46,8 +48,7 @@
         <br><br>
         <h1 class="header center blue-grey-text text-lighten-5  animated jello">Motus Simulation</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A debuting Humanoid Robotics team focused on <span class="animated fadeInDown">Mechatronics</span> and
-            <span class="animated fadeInRightBig">Machine Learning.</span>
+          <h5 class="header col s12 light">A debuting Humanoid Robotics team focused on <span id="introtext"></span>
           </h5>
         </div>
 
@@ -181,13 +182,9 @@
   </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--  Scripts--> 
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
 
