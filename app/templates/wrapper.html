@@ -9,14 +9,17 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="{{ url_for('static', filename = 'css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="{{ url_for('static', filename = 'css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"
     />
     <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/pms.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    
 
 </head>
 
@@ -25,7 +28,7 @@
         <nav class="white" role="navigation">
             <div class="nav-wrapper container">
                 <!-- <a id="logo-container" href="#" class="brand-logo">MS logo</a> -->
-                <a id="logo-container" href = "/"><img src="{{ url_for('static', filename = 'images/MS_logo.png') }}" alt="MS Logo" style = "padding:5px;"></a>
+                <a id="logo-container" href="/"><img src="{{ url_for('static', filename = 'images/MS_logo.png') }}" alt="MS Logo" style = "padding:5px;"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('about') }}">About Us</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
@@ -37,11 +40,11 @@
         </nav>
     </div>
     <ul id="nav-mobile" class="side-nav">
-            <li><a href="{{ url_for('home_page') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About Us</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-            <li><a href="#follow">Follow Us</a></li>
-        </ul>
+        <li><a href="{{ url_for('home_page') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        <li><a href="#follow">Follow Us</a></li>
+    </ul>
     {% block content %}{% endblock %}
 
     <footer class="page-footer red">
@@ -65,7 +68,9 @@
                 </div>
                 <div class="col l3 s6">
                     <a id="follow" class="scrollspy">
-                        <h5 class="white-text">Connect</h5>
+                        <div data-aos="flip-up">
+                            <h5 class="white-text">Connect</h5>
+                        </div>
                     </a>
                     <ul id="ul_social">
                         <li><a class="fa fa-facebook white-text" href="https://www.facebook.com/motussimulation/" target="_blank">&nbsp;</a></li>
@@ -84,16 +89,23 @@
     </footer>
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="{{ url_for('static', filename = 'js/materialize.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename = 'js/init.js') }}"></script>
-
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
     <script>
-          $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-  });
-
-</script>
+        AOS.init();
+        $('#introtext').typeIt({
+            strings: ["Mechatronics.", "Machine Learning."],
+            speed: 50,
+            breakLines: false,
+            autoStart: false,
+            loop: true,
+            deleteDelay: 2000,
+            loopDelay: 2000,
+        });
+    </script>
 
 </body>
 
