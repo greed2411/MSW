@@ -61,7 +61,7 @@
                     <div class="card-action">  
                         <a href="{{ projects_link }}" target="_blank">Projects</a>
                         <a href="{{ skills_link }}" target="_blank">Skills</a>
-                        <a href="{{ cv_name }}" target="_blank">CV</a>
+                        <a href="{{ url_for('static', filename = 'media/CV/' + cv_name + '.pdf') }}" target="_blank">CV</a>
                     </div>
                     <div class="card-action white-icons">
                         <a href="{{ facebook_link }}" style="color: #3B5998" class="fa fa-facebook" target="_blank"></a>
@@ -70,8 +70,8 @@
                         <a href="{{ linkedin_link }}" style="color: #007bb5" class="fa fa-linkedin" target="_blank"></a>
                         <a href="{{ github_link }}" style="color: #0F0F0F" class="fa fa-github" target="_blank"></a>
                         <a href="{{ instagram_link }}" style="color: #fbad50" class="fa fa-instagram" target="_blank"></a>
+                        <a href="{{ mail_link }}" style="color: #cb2027" class="fa fa-envelope" target="_blank"></a>
                         <a href="{{ pinterest_link }}" style="color: #cb2027" class="fa fa-pinterest" target="_blank"></a>
-                        <a href="{{ quora_link }}" style="color: #cb2027" class="fa fa-quora" target="_blank"></a>
                     </div>
                 </div>
             </div>
