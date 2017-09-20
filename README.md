@@ -8,4 +8,9 @@ Yet to do:
  
 ### Backend
 
- - [ ] blog.website.com to post articles or news regarding the team and their projects.
+ - [ ] blog.website.com to post articles or news regarding the team and their projects
+ - [ ] support markdown format for the blog posts.
+ 
+### Others
+
+ - [ ] setup a venv to test before hosting.
