@@ -5,6 +5,7 @@ Yet to do:
 ### Frontend
 
  - [x] Google Map API, to show the address of Creation Labs for contact.html
+ - [ ] Fix the logo alignment with the blog title.
  
 ### Backend
 
