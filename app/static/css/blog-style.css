@@ -1,0 +1,45 @@
+div.card-panel.red.darken-2 {
+    margin: 0;
+}
+
+div.xtra-padding {
+    padding: 7% 0% 4.4% 0%;
+}
+
+h4.white-text.inline-thing {
+    display: inline;
+    line-height: 200%;
+}
+
+a.title-of-article:link,
+a.title-of-article:visited {
+    color: black;
+}
+
+a.title-of-article:hover {
+    color: #0CAAE9;
+}
+
+h5.articleTitle {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 5%;
+}
+
+p.publishedDate {
+    margin: 0px;
+    font-size: 17px;
+    margin: 10px 0 10px 0;
+}
+
+p.bold.italic.authors {
+    padding: 15px 0 15px 0;
+}
+
+footer.page-footer {
+    margin: 0;
+}
+
+#ul_social li {
+    display: inline;
+}

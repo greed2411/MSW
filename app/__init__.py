@@ -24,6 +24,32 @@ def contact():
     return render_template('contact.html', title = title, content = content)
 
 
+@app.route('/blog/')
+def blog():
+    title = "Motus Simulation Blog"
+    article_details = [
+
+                # IMPORTANT : new articles first, so place the new article above the existing articles.
+
+                [
+                    "Phase 2 of Arm robot", # title_of_the_article
+                    "Monday, September 18, 2017", # published_date - maintain this format - day_of_the_week, month date_of_the_month, year
+                    "Shreyas Sharma, Axel", # author_of_post
+                    "phase-2-of-arm-robot", # the html page of the title mentioned, maintain this format.
+                    ["research", "application", "sensors", "IoT"] # all the tags you want for the article.
+                ], # remember the comma ',' after every line
+                [
+                    "Phase 1 of Arm robot", # title_of_the_article
+                    "Wednesday, September 13, 2017", # published_date - maintain this format - day_of_the_week, month date_of_the_month, year
+                    "Shreyas Sharma, Axel", # author_of_post
+                    "phase-1-of-arm-robot", # the html page of the title mentioned, maintain this format.
+                    ["research", "bioinspiration", "OpenSim"] # all the tags you want for the article.
+                ] # remember the comma ','
+                
+    ]
+    return render_template('blog.html', title = title, article_details = article_details, blog_home = True)
+
+
 @app.route('/about/<name>')
 def profile(name):
 

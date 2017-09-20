@@ -1,4 +1,19 @@
 {% extends "wrapper.html" %} {% block content %}
+<style>
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
 <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
             <div class="container">
@@ -15,14 +30,28 @@
                 <div class="row">
                     <div class="col s12">
                         <h3><i class="mdi-content-send brown-text"></i></h3>
-                        <h4>Where we are?</h4>
-                        <p class="light">We are part of Creation labs.</p>
+                        <!-- <h4>Where we are?</h4>
+                        <p class="light">We are part of Creation labs.</p> -->
                         <p class="light">email : </p>
-                        <p class="light">address: </p>
-                        <p class="light">available hours</p>
+                        <!-- <p class="light">address: </p> -->
+                        <p class="light">available hours : </p>
                     </div>
                 </div>
-        
+
             </div>
         </div>
+        <div class = "container">
+     
+<div class = "row">
+       
+    <div class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0258825803708!2d79.15402671445217!3d12.970195590856784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad47a02752cced%3A0x25df12d1675103e0!2sCreation+Labs!5e0!3m2!1sen!2sin!4v1505900167356" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
+         
+   
+        </div>
+        
+       
+        
 {% endblock %}
