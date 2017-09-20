@@ -8,8 +8,7 @@ Yet to do:
  
 ### Backend
 
- - [ ] blog.website.com to post articles or news regarding the team and their projects
- - [ ] support markdown format for the blog posts.
+ - [x] blog.website.com to post articles or news regarding the team and their projects.
  
 ### Others
 
