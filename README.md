@@ -4,12 +4,10 @@ Yet to do:
 
 ### Frontend
 
- - [x] Google Map API, to show the address of Creation Labs for contact.html
  - [ ] Fix the logo alignment with the blog title.
  
 ### Backend
 
- - [x] blog.website.com to post articles or news regarding the team and their projects.
  - [ ] solve the recursive jinja issue for addressing each html file, referencing problem.
  
 ### Others
