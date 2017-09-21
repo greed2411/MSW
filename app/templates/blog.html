@@ -23,26 +23,26 @@
 
     <a href="/blog/">
         <div class="section red darken-1 xtra-padding">
-            <div class="container">
+            <div class="container valign-wrapper">
                 <img src="{{ url_for('static', filename = 'images/MS_logo_white.png') }}" alt="white logo">
-                <h4 class="white-text inline-thing">&nbsp;Blog</h4>
+                <h5 class="white-text inline-thing">&nbsp;Blog</h5>
 
             </div>
         </div>
     </a>
 
-    {% if blog_home %} {% for article in article_details %}
+    {% for article_date in articles %}
     <div class="section">
         <div class="container">
 
             <div class="s12">
 
-                <h5 class="articleTitle" id="{{ article[3] }}"><a href="#{{ article[3] }}" class="title-of-article">{{ article[0] }}</a></h5>
-                <p class="publishedDate lighten grey-text text-darken-1">{{ article[1] }}</p>
-                <p class="bold italic authors"><em>Posted by {{ article[2] }}</em></p>
+                <h5 class="articleTitle" id="{{ articles[article_date]['urlLink'] }}"><a href="#{{ articles[article_date]['urlLink'] }}" class="title-of-article">{{ articles[article_date]['title'] }}</a></h5>
+                <p class="publishedDate lighten grey-text text-darken-1">{{ articles[article_date]['publishedDate'] }}</p>
+                <p class="bold italic authors"><em>Posted by {{ articles[article_date]['authors'] }}</em></p>
 
-                {% include "articles/{}.html".format(article[3]) %}
-                <br> {% if article[4] %} {% for chip in article[4] %}
+                {% include "articles/{}.html".format(articles[article_date]['urlLink']) %}
+                <br> {% if articles[article_date]['tags'] %} {% for chip in articles[article_date]['tags'] %}
                 <div class="chip blue-grey lighten-5 black-text">
                     {{ chip }}
                 </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-    {% endfor %} {% endif %}
+    {% endfor %}
 
 
     <footer class="page-footer red">

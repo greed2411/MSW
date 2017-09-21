@@ -1,0 +1,25 @@
+{
+    "18-09-2017": {
+        "title": "Phase 2 of Arm robot",
+        "publishedDate": "Monday, September 18, 2017",
+        "authors": "Shreyas Sharma, Axel",
+        "urlLink": "phase-2-of-arm-robot",
+        "tags": [
+            "research",
+            "application",
+            "sensors",
+            "IoT"
+        ]
+    },
+    "13-09-2017": {
+        "title": "Phase 1 of Arm robot",
+        "publishedDate": "Wednesday, September 13, 2017",
+        "authors": "Shreyas Sharma, Axel",
+        "urlLink": "phase-1-of-arm-robot",
+        "tags": [
+            "research",
+            "bioinspiration",
+            "OpenSim"
+        ]
+    }
+}

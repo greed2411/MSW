@@ -6,9 +6,8 @@ div.xtra-padding {
     padding: 7% 0% 4.4% 0%;
 }
 
-h4.white-text.inline-thing {
+h5.white-text.inline-thing {
     display: inline;
-    line-height: 200%;
 }
 
 a.title-of-article:link,
