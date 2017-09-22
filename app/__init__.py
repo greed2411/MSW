@@ -5,14 +5,14 @@ app = Flask(__name__)
 app.secret_key = 'supposed to be a secret'
 
 def load_articles():
-    with open('articles.json', 'r') as infile:
-        articles = json.load(infile)
+    with open('articles.json', 'r') as ainfile:
+        articles = json.load(ainfile)
 
     return articles
 
 def load_profile():
-    with open('profiles.json', 'r') as infile:
-        profiles = json.load(infile)
+    with open('profiles.json', 'r') as pinfile:
+        profiles = json.load(pinfile)
 
     return profiles
 
@@ -39,15 +39,15 @@ def contact():
 def blog():
     title = "Motus Simulation Blog"
     articles = load_articles()
-    return render_template('blog.html', title = title, articles = articles, blog_home = True)
+    return render_template('blog.html', title = title, articles = articles)
 
 
 @app.route('/about/<name>')
 def profile(name):
 
-    profiles = load_profile()
     if name in ['shreyas', 'axel', 'joshua', 'shaishav', 'aakriti', 'jaivarsan']:
-                    
+
+        profiles = load_profile()     
         profile = profiles[name]
         return render_template('profile.html', profile = profile)
     
@@ -57,9 +57,7 @@ def profile(name):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    """
-	for anyone trying different links or searching for images within the server
-    """
+
     title = "404 bud."
     content = "what you are searching for isn't available."
     return render_template('error.html', title = title, content = content), 404
