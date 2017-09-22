@@ -47,24 +47,8 @@ def profile(name):
 
     profiles = load_profile()
     if name in ['shreyas', 'axel', 'joshua', 'shaishav', 'aakriti', 'jaivarsan']:
-        if name == 'shreyas':
-            profile = profiles['shreyas']
-        
-        elif name == 'axel':
-            profile = profiles['axel']
-
-        elif name == 'joshua':
-            profile = profiles['joshua']
-
-        elif name == 'shaishav':
-            profile = profiles['shaishav']
-
-        elif name == 'aakriti':
-            profile = profiles['aakriti']
-                                                
-        elif name == 'jaivarsan':
-            profile = profiles['jaivarsan']
-
+                    
+        profile = profiles[name]
         return render_template('profile.html', profile = profile)
     
     else:
