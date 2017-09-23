@@ -9,4 +9,3 @@ Yet to do:
 ### Backend
 
  - [ ] get the articles according to chips/tags selection.
- - [ ] testing security and tolerance.
