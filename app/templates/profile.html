@@ -63,13 +63,13 @@
                         <a href="{{ url_for('static', filename = 'media/CV/' + profile.cv_name + '.pdf') }}" target="_blank">CV</a>
                     </div>
                     <div class="card-action white-icons">
-                        <a href="{{ profile[facebook_link] }}" style="color: #3B5998" class="fa fa-facebook" target="_blank"></a>
-                        <a href="{{ profile[twitter_link] }}" style="color: #55ACEE" class="fa fa-twitter" target="_blank"></a>
+                        <a href="{{ profile.facebook_link }}" style="color: #3B5998" class="fa fa-facebook" target="_blank"></a>
+                        <a href="{{ profile.twitter_link }}" style="color: #55ACEE" class="fa fa-twitter" target="_blank"></a>
                         <a href="{{ gplus_link }}" style="color: #dd4b39" class="fa fa-google" target="_blank"></a>
-                        <a href="{{ profile[linkedin_link] }}" style="color: #007bb5" class="fa fa-linkedin" target="_blank"></a>
-                        <a href="{{ profile[github_link] }}" style="color: #0F0F0F" class="fa fa-github" target="_blank"></a>
-                        <a href="{{ profile[instagram_link] }}" style="color: #fbad50" class="fa fa-instagram" target="_blank"></a>
-                        <a href="{{ profile[mail_link] }}" style="color: #cb2027" class="fa fa-envelope" target="_blank"></a>
+                        <a href="{{ profile.linkedin_link }}" style="color: #007bb5" class="fa fa-linkedin" target="_blank"></a>
+                        <a href="{{ profile.github_link }}" style="color: #0F0F0F" class="fa fa-github" target="_blank"></a>
+                        <a href="{{ profile.instagram_link }}" style="color: #fbad50" class="fa fa-instagram" target="_blank"></a>
+                        <a href="{{ profile.mail_link }}" style="color: #cb2027" class="fa fa-envelope" target="_blank"></a>
                         <a href="{{ pinterest_link }}" style="color: #cb2027" class="fa fa-pinterest" target="_blank"></a>
                     </div>
                 </div>

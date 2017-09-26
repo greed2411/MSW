@@ -5,14 +5,14 @@ app = Flask(__name__)
 app.secret_key = 'supposed to be a secret'
 
 def load_articles():
-    with open('articles.json', 'r') as ainfile:
-        articles = json.load(ainfile)
+    with open('articles.json', 'r') as infile:
+        articles = json.load(infile)
 
     return articles
 
 def load_profile():
-    with open('profiles.json', 'r') as pinfile:
-        profiles = json.load(pinfile)
+    with open('profiles.json', 'r') as infile:
+        profiles = json.load(infile)
 
     return profiles
 
@@ -44,10 +44,11 @@ def blog():
 
 @app.route('/about/<name>')
 def profile(name):
-
+    
+    profiles = load_profile()  
     if name in ['shreyas', 'axel', 'joshua', 'shaishav', 'aakriti', 'jaivarsan']:
 
-        profiles = load_profile()     
+           
         profile = profiles[name]
         return render_template('profile.html', profile = profile)
     
