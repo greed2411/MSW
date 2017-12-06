@@ -44,7 +44,7 @@
                 {% include "articles/{}.html".format(articles[article_date]['urlLink']) %}
                 <br> {% if articles[article_date]['tags'] %} {% for chip in articles[article_date]['tags'] %}
                 <div class="chip blue-grey lighten-5 black-text">
-                    {{ chip }}
+                    <a href="/blog/{{chip}}" class="black-text">{{ chip }}</a>
                 </div>
                 {% endfor %} {% endif %}
 

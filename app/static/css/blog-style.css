@@ -1,3 +1,7 @@
+body{
+    text-align: justify;
+}
+
 div.card-panel.red.darken-2 {
     margin: 0;
 }

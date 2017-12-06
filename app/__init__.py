@@ -4,11 +4,17 @@ import json
 app = Flask(__name__)
 app.secret_key = 'supposed to be a secret'
 
-def load_articles():
+def load_articles(chip = None):
     with open('articles.json', 'r') as ainfile:
         articles = json.load(ainfile)
-
-    return articles
+        if chip :
+            article_with_specific_tag = {}
+            for article_date in articles:
+                if chip in articles[article_date]['tags']:
+                    article_with_specific_tag[article_date] = articles[article_date]
+            return article_with_specific_tag
+        else :
+            return articles
 
 def load_profile():
     with open('profiles.json', 'r') as pinfile:
@@ -36,10 +42,12 @@ def contact():
 
 
 @app.route('/blog/')
-def blog():
+@app.route('/blog/<chip>')
+def blog_topic(chip = None):
     title = "Motus Simulation Blog"
-    articles = load_articles()
+    articles = load_articles(chip)
     return render_template('blog.html', title = title, articles = articles)
+
 
 
 @app.route('/about/<name>')
@@ -73,4 +81,6 @@ def bad_request(error):
 
 if __name__ == '__main__':
 
-	app.run(debug = True)
+    app.secret_key = 'super secret key'
+    app.config['SERVER_NAME'] = 'motus.team:5000'
+    app.run(debug = True)
